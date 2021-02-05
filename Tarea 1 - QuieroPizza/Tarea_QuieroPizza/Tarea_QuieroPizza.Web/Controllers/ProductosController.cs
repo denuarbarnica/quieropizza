@@ -25,7 +25,7 @@ namespace Tarea_QuieroPizza.Web.Controllers
             producto3.Descripcion = "Alistas de Pollo";
 
             var producto4 = new ProductoModel();
-            producto4.id = 3;
+            producto4.id = 4;
             producto4.Descripcion = "Pizza Jamon y Queso";
 
             var listadeProductos = new List<ProductoModel>();
