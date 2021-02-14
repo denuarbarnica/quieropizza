@@ -14,8 +14,21 @@
         <th>
             @Html.DisplayNameFor(model => model.Descripcion)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Precio)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.urlImagen)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
         </th>
         <th></th>
     </tr>
@@ -26,7 +39,16 @@
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Categoria.Descripcion)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            <img src="@item.urlImagen" alt="@item.Descripcion" style="width:84px; height:auto; " />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activo)
         </td>
         <td>
             @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |

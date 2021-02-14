@@ -20,11 +20,34 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Descripcion)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Precio)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.urlImagen)
+        </dt>
+        <dd>
+            <img src="@Model.urlImagen" alt="@Model.Descripcion" style="width:200px; height:auto; " />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activo)
         </dd>
 
     </dl>
@@ -33,7 +56,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
